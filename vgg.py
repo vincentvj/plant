@@ -42,9 +42,9 @@ from datetime import datetime
 IMG_WIDTH  = 224
 IMG_HEIGHT = 224
 
-NUM_EPOCHS = 1
-BATCH_SIZE = 1
-BATCH_SIZE_VAL = 1
+NUM_EPOCHS = 10
+BATCH_SIZE = 10
+BATCH_SIZE_VAL = 5
 FC_LAYER_SIZE = 1024
 
 MODEL_DIRECTORY = "VGG16-plant.h5"
@@ -160,8 +160,8 @@ def train(train_dir, val_dir):
 	#print('%s (%.2f%%)' % (label[1], label[2]*100))
 
 def main():
-	train_dir = "Data/Tanaman/"
-	val_dir = "Data/Tanaman_Validation/"
+	train_dir = "Tanaman/"
+	val_dir = "Tanaman_Validation/"
 	train(train_dir, val_dir)
 
 if __name__=="__main__":
